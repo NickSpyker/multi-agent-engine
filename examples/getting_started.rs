@@ -14,4 +14,16 @@
  * limitations under the License.
  */
 
-fn main() {}
+use multi_agent_engine::{Controller, MultiAgentEngine, Simulator};
+
+struct MyController {}
+
+impl Controller for MyController {}
+
+struct MySimulator {}
+
+impl Simulator for MySimulator {}
+
+fn main() {
+    let engine: MultiAgentEngine = MultiAgentEngine::new();
+}

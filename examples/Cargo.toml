@@ -24,6 +24,7 @@ readme = "README.md"
 repository.workspace = true
 
 [dependencies]
+multi-agent-engine = { path = "../" }
 
 [[example]]
 name = "getting-started"

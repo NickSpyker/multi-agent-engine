@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+pub struct MultiAgentEngine {}
 
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+impl MultiAgentEngine {
+    pub fn new() -> Self {
+        Self {}
+    }
+}

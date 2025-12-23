@@ -14,10 +14,4 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
-
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+pub trait Controller {}
