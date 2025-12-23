@@ -12,22 +12,46 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[workspace]
-resolver = "2"
-members = ["multi-agent-engine"]
-
-[workspace.package]
+[package]
+name = "multi-agent-engine"
 version = "0.1.0"
 authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
 categories = ["simulation"]
 description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
-documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/documentation.md"
+documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/multi-agent-engine.md"
 edition = "2024"
+exclude = [".github/"]
 homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
 keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
 license = "MIT or Apache-2.0"
 publish = true
 readme = "README.md"
+repository = "https://github.com/NickSpyker/multi-agent-engine"
+
+[features]
+default = []
+
+[dependencies]
+
+[workspace]
+resolver = "2"
+members = [
+    "crates/multi-agent-engine-core",
+    "crates/multi-agent-engine-gpu",
+    # Internal
+    "benches",
+    "examples"
+]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
+categories = ["simulation"]
+edition = "2024"
+homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
+keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
+license = "MIT or Apache-2.0"
+publish = true
 repository = "https://github.com/NickSpyker/multi-agent-engine"
 
 [workspace.dependencies]

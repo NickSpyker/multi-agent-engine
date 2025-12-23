@@ -13,18 +13,18 @@
 # limitations under the License.
 
 [package]
-name = "multi-agent-engine"
-version.workspace = true
+name = "examples"
+version = "0.0.0"
 authors.workspace = true
-categories.workspace = true
-description.workspace = true
-documentation.workspace = true
+description = "Collection of examples to show how to use the crate multi-agent-engine."
 edition.workspace = true
-homepage.workspace = true
-keywords.workspace = true
 license.workspace = true
-publish.workspace = true
-readme.workspace = true
+publish = false
+readme = "README.md"
 repository.workspace = true
 
 [dependencies]
+
+[[example]]
+name = "getting-started"
+path = "getting_started.rs"
