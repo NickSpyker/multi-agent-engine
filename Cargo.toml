@@ -1,0 +1,38 @@
+# Copyright 2025 Nicolas Spijkerman
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+[workspace]
+resolver = "2"
+members = ["src/multi-agent-engine"]
+
+[workspace.package]
+version = "0.1.0"
+authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
+categories = ["simulation"]
+description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
+documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/documentation.md"
+edition = "2024"
+exclude = [".github/"]
+homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
+include = ["LICENSE-MIT", "LICENSE-APACHE"]
+keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
+license = "MIT or Apache-2.0"
+publish = true
+readme = "README.md"
+repository = "https://github.com/NickSpyker/multi-agent-engine"
+
+[workspace.dependencies]
+
+[profile.dev.package."*"]
+opt-level = 2
