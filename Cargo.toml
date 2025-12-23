@@ -14,7 +14,7 @@
 
 [workspace]
 resolver = "2"
-members = ["src/multi-agent-engine"]
+members = ["multi-agent-engine"]
 
 [workspace.package]
 version = "0.1.0"
@@ -23,7 +23,6 @@ categories = ["simulation"]
 description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
 documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/documentation.md"
 edition = "2024"
-exclude = [".github/"]
 homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
 include = ["LICENSE-MIT", "LICENSE-APACHE"]
 keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
