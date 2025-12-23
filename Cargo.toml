@@ -24,7 +24,6 @@ description = "A concurrent library for building multi-agent simulators with loc
 documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/documentation.md"
 edition = "2024"
 homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
-include = ["LICENSE-MIT", "LICENSE-APACHE"]
 keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
 license = "MIT or Apache-2.0"
 publish = true
