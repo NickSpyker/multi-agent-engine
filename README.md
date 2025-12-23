@@ -295,7 +295,7 @@ struct MySimulator {
 impl Simulator for MySimulator { /* ... */ }
 
 fn main() {
-    // 3. Run the engine
+    // 4. Run the engine
     let engine = MultiAgentEngine::new(
         MyController::new(),
         MySimulator::new(),
