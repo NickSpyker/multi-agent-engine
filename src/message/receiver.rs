@@ -14,12 +14,27 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+use std::fmt::Debug;
 
-pub mod message;
+#[derive(Debug, Clone)]
+pub struct Receiver<T>
+where
+    T: Debug + Clone,
+{
+    receiver: crossbeam_channel::Receiver<T>,
+}
 
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+impl<T> Receiver<T>
+where
+    T: Debug + Clone,
+{
+    #[inline]
+    pub(super) fn new(receiver: crossbeam_channel::Receiver<T>) -> Self {
+        Self { receiver }
+    }
+
+    #[inline]
+    pub fn receive(&self) -> Vec<T> {
+        self.receiver.try_iter().collect()
+    }
+}

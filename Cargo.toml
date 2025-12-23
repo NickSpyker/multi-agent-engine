@@ -28,10 +28,10 @@ publish = true
 readme = "README.md"
 repository = "https://github.com/NickSpyker/multi-agent-engine"
 
-[features]
-default = []
-
 [dependencies]
+multi-agent-engine-core = { path = "crates/multi-agent-engine-core" }
+multi-agent-engine-gpu = { path = "crates/multi-agent-engine-gpu" }
+crossbeam-channel = { version = "0.5.15", features = ["default"] }
 
 [workspace]
 resolver = "2"
@@ -53,8 +53,6 @@ keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
 license = "MIT or Apache-2.0"
 publish = true
 repository = "https://github.com/NickSpyker/multi-agent-engine"
-
-[workspace.dependencies]
 
 [profile.dev.package."*"]
 opt-level = 2

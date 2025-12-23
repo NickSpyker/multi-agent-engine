@@ -14,12 +14,7 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+use crate::Error;
+use std::result;
 
-pub mod message;
-
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+pub type Result<T> = result::Result<T, Error>;

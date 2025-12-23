@@ -14,10 +14,26 @@
  * limitations under the License.
  */
 
-pub struct MultiAgentEngine {}
+use crate::{Controller, Simulator};
 
-impl MultiAgentEngine {
-    pub fn new() -> Self {
-        Self {}
+pub struct MultiAgentEngine<C, S>
+where
+    C: Controller,
+    S: Simulator,
+{
+    controller: C,
+    simulator: S,
+}
+
+impl<C, S> MultiAgentEngine<C, S>
+where
+    C: Controller,
+    S: Simulator,
+{
+    pub fn new(controller: C, simulator: S) -> Self {
+        Self {
+            controller,
+            simulator,
+        }
     }
 }

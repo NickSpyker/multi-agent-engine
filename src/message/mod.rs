@@ -14,12 +14,10 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+mod queue;
+mod receiver;
+mod sender;
 
-pub mod message;
-
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+pub use queue::Queue;
+pub use receiver::Receiver;
+pub use sender::Sender;

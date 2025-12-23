@@ -14,12 +14,28 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+use multi_agent_engine_core::{Error, Result};
+use std::fmt::Debug;
 
-pub mod message;
+#[derive(Debug, Clone)]
+pub struct Sender<T>
+where
+    T: Debug + Clone,
+{
+    sender: crossbeam_channel::Sender<T>,
+}
 
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+impl<T> Sender<T>
+where
+    T: Debug + Clone,
+{
+    #[inline]
+    pub(super) fn new(sender: crossbeam_channel::Sender<T>) -> Self {
+        Self { sender }
+    }
+
+    #[inline]
+    pub fn send(&self, msg: T) -> Result<()> {
+        self.sender.send(msg).map_err(|_| Error::MessageSender)
+    }
+}

@@ -25,5 +25,8 @@ struct MySimulator {}
 impl Simulator for MySimulator {}
 
 fn main() {
-    let engine: MultiAgentEngine = MultiAgentEngine::new();
+    let controller = MyController {};
+    let simulator = MySimulator {};
+
+    let engine = MultiAgentEngine::new(controller, simulator);
 }

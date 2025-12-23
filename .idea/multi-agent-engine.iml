@@ -5,6 +5,8 @@
       <sourceFolder url="file://$MODULE_DIR$/benches" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/crates/multi-agent-engine-core/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/crates/multi-agent-engine-gpu/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crates/multi-agent-engine-macros/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/crates/multi-agent-engine-macros/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/examples" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/src" isTestSource="false" />
