@@ -15,18 +15,21 @@
  */
 
 use std::{
+    any::Any,
     error,
     fmt::{self, Debug, Display, Formatter},
 };
 
 #[non_exhaustive]
 pub enum Error {
+    Thread(Box<dyn Any + Send + 'static>),
     MessageSender,
 }
 
 impl Debug for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match self {
+            Self::Thread(err) => write!(f, "{err:?}"),
             Self::MessageSender => write!(f, "MessageSenderError(..)"),
         }
     }
@@ -35,6 +38,7 @@ impl Debug for Error {
 impl Display for Error {
     fn fmt(&self, f: &mut Formatter<'_>) -> fmt::Result {
         match self {
+            Self::Thread(err) => write!(f, "{err:?}"),
             Self::MessageSender => write!(f, "sending on a disconnected channel"),
         }
     }
@@ -43,6 +47,7 @@ impl Display for Error {
 impl error::Error for Error {
     fn source(&self) -> Option<&(dyn error::Error + 'static)> {
         match self {
+            Self::Thread(_) => None,
             Self::MessageSender => None,
         }
     }

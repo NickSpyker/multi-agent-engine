@@ -12,32 +12,16 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-[package]
-name = "multi-agent-engine"
-version = "0.1.0"
-authors = ["Nicolas Spijkerman <nicospijke@gmail.com>"]
-categories = ["simulation"]
-description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
-documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/multi-agent-engine.md"
-edition = "2024"
-exclude = [".github/"]
-homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md"
-keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
-license = "MIT or Apache-2.0"
-publish = true
-readme = "README.md"
-repository = "https://github.com/NickSpyker/multi-agent-engine"
-
-[dependencies]
-multi-agent-engine-core = { path = "crates/multi-agent-engine-core" }
-multi-agent-engine-gpu = { path = "crates/multi-agent-engine-gpu" }
-crossbeam-channel = { version = "0.5.15", features = ["default"] }
-
 [workspace]
 resolver = "2"
 members = [
+    # Workspace Crates
     "crates/multi-agent-engine-core",
+    "crates/multi-agent-engine-sync",
+    "crates/multi-agent-engine-runtime",
     "crates/multi-agent-engine-gpu",
+    # Published Library
+    "multi-agent-engine",
     # Internal
     "benches",
     "examples"
@@ -52,7 +36,18 @@ homepage = "https://github.com/NickSpyker/multi-agent-engine/blob/main/README.md
 keywords = ["engine", "simulation", "multi-agent", "concurrent", "gpu"]
 license = "MIT or Apache-2.0"
 publish = true
+readme = "README.md"
 repository = "https://github.com/NickSpyker/multi-agent-engine"
+
+[workspace.dependencies]
+# Workspace Crates
+multi-agent-engine-core = { path = "crates/multi-agent-engine-core" }
+multi-agent-engine-sync = { path = "crates/multi-agent-engine-sync" }
+multi-agent-engine-runtime = { path = "crates/multi-agent-engine-runtime" }
+multi-agent-engine-gpu = { path = "crates/multi-agent-engine-gpu" }
+# Dependencies
+crossbeam-channel = { version = "0.5.15", features = ["default"] }
+arc-swap = { version = "1.8.0", features = [] }
 
 [profile.dev.package."*"]
 opt-level = 2

@@ -14,4 +14,22 @@
  * limitations under the License.
  */
 
-pub trait Controller {}
+use multi_agent_engine_core::{Error, Result};
+use std::fmt::Debug;
+
+#[derive(Debug, Clone)]
+pub struct Sender<T> {
+    sender: crossbeam_channel::Sender<T>,
+}
+
+impl<T> Sender<T> {
+    #[inline]
+    pub(super) fn new(sender: crossbeam_channel::Sender<T>) -> Self {
+        Self { sender }
+    }
+
+    #[inline]
+    pub fn send(&self, msg: T) -> Result<()> {
+        self.sender.send(msg).map_err(|_| Error::MessageSender)
+    }
+}

@@ -14,28 +14,26 @@
  * limitations under the License.
  */
 
-use multi_agent_engine_core::{Error, Result};
-use std::fmt::Debug;
+use arc_swap::{ArcSwap, Guard};
+use std::sync::Arc;
 
 #[derive(Debug, Clone)]
-pub struct Sender<T>
-where
-    T: Debug + Clone,
-{
-    sender: crossbeam_channel::Sender<T>,
+pub struct Shared<T> {
+    data: Arc<ArcSwap<T>>,
 }
 
-impl<T> Sender<T>
-where
-    T: Debug + Clone,
-{
-    #[inline]
-    pub(super) fn new(sender: crossbeam_channel::Sender<T>) -> Self {
-        Self { sender }
+impl<T> Shared<T> {
+    pub fn new(data: T) -> Self {
+        Self {
+            data: Arc::new(ArcSwap::from_pointee(data)),
+        }
     }
 
-    #[inline]
-    pub fn send(&self, msg: T) -> Result<()> {
-        self.sender.send(msg).map_err(|_| Error::MessageSender)
+    pub fn load(&self) -> Guard<Arc<T>> {
+        self.data.load()
+    }
+
+    pub fn store(&self, data: T) {
+        self.data.store(Arc::new(data));
     }
 }

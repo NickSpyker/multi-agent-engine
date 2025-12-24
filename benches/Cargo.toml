@@ -32,6 +32,16 @@ path = "core.rs"
 harness = false
 
 [[bench]]
+name = "sync"
+path = "sync.rs"
+harness = false
+
+[[bench]]
+name = "runtime"
+path = "runtime.rs"
+harness = false
+
+[[bench]]
 name = "gpu"
 path = "gpu.rs"
 harness = false

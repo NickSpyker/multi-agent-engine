@@ -13,19 +13,25 @@
 # limitations under the License.
 
 [package]
-name = "examples"
-version = "0.0.0"
+name = "multi-agent-engine"
+version.workspace = true
 authors.workspace = true
-description = "Collection of examples to show how to use the crate multi-agent-engine."
+categories.workspace = true
+description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
+documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/multi-agent-engine.md"
 edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
 license.workspace = true
-publish = false
-readme = "README.md"
+publish.workspace = true
+readme.workspace = true
 repository.workspace = true
 
-[dependencies]
-multi-agent-engine = { path = "../multi-agent-engine" }
+[features]
+default = []
 
-[[example]]
-name = "getting-started"
-path = "getting_started.rs"
+[dependencies]
+multi-agent-engine-core.workspace = true
+multi-agent-engine-gpu.workspace = true
+crossbeam-channel.workspace = true
+arc-swap.workspace = true

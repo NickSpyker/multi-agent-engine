@@ -15,6 +15,8 @@
  */
 
 use crate::{Controller, Simulator};
+use multi_agent_engine_core::{Error, Result};
+use std::thread;
 
 pub struct MultiAgentEngine<C, S>
 where
@@ -27,13 +29,28 @@ where
 
 impl<C, S> MultiAgentEngine<C, S>
 where
-    C: Controller,
-    S: Simulator,
+    C: Controller + Send + 'static,
+    S: Simulator + Send + 'static,
 {
     pub fn new(controller: C, simulator: S) -> Self {
         Self {
             controller,
             simulator,
         }
+    }
+
+    pub fn run(self) -> Result<()> {
+        let Self {
+            controller,
+            simulator,
+        } = self;
+
+        let controller_handle = thread::spawn(move || controller.run());
+        let simulator_handle = thread::spawn(move || simulator.run());
+
+        controller_handle.join().map_err(Error::Thread)??;
+        simulator_handle.join().map_err(Error::Thread)??;
+
+        Ok(())
     }
 }

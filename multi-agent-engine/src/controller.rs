@@ -14,12 +14,8 @@
  * limitations under the License.
  */
 
-mod controller;
-mod multi_agent_engine;
-mod simulator;
+use multi_agent_engine_core::Result;
 
-pub mod message;
-
-pub use controller::Controller;
-pub use multi_agent_engine::MultiAgentEngine;
-pub use simulator::Simulator;
+pub trait Controller {
+    fn run(self) -> Result<()>;
+}

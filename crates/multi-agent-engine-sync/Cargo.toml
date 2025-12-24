@@ -13,19 +13,21 @@
 # limitations under the License.
 
 [package]
-name = "examples"
-version = "0.0.0"
+name = "multi-agent-engine-sync"
+version.workspace = true
 authors.workspace = true
-description = "Collection of examples to show how to use the crate multi-agent-engine."
+categories.workspace = true
+description = "TODO"
+documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/sync.md"
 edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
 license.workspace = true
-publish = false
+publish.workspace = true
 readme = "README.md"
 repository.workspace = true
 
-[dependencies]
-multi-agent-engine = { path = "../multi-agent-engine" }
+[features]
+default = []
 
-[[example]]
-name = "getting-started"
-path = "getting_started.rs"
+[dependencies]

@@ -14,27 +14,16 @@
  * limitations under the License.
  */
 
-use std::fmt::Debug;
+use super::{Receiver, Sender};
+use crossbeam_channel::unbounded;
 
-#[derive(Debug, Clone)]
-pub struct Receiver<T>
-where
-    T: Debug + Clone,
-{
-    receiver: crossbeam_channel::Receiver<T>,
-}
+pub struct Queue;
 
-impl<T> Receiver<T>
-where
-    T: Debug + Clone,
-{
+impl Queue {
     #[inline]
-    pub(super) fn new(receiver: crossbeam_channel::Receiver<T>) -> Self {
-        Self { receiver }
-    }
+    pub fn channel<T>() -> (Sender<T>, Receiver<T>) {
+        let (sender, receiver) = unbounded();
 
-    #[inline]
-    pub fn receive(&self) -> Vec<T> {
-        self.receiver.try_iter().collect()
+        (Sender::<T>::new(sender), Receiver::<T>::new(receiver))
     }
 }
