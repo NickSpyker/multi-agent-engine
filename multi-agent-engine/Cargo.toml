@@ -31,6 +31,10 @@ repository.workspace = true
 default = []
 
 [dependencies]
+multi-agent-engine-core.workspace = true
+multi-agent-engine-gpu.workspace = true
+multi-agent-engine-runtime.workspace = true
+multi-agent-engine-sync.workspace = true
 
 [lints]
 workspace = true

@@ -33,6 +33,15 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5192cca8006f1fd4f7237516f40fa183bb07f8fbdfedaa0036de5ea9b0b45e78"
 
 [[package]]
+name = "arc-swap"
+version = "1.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "51d03449bb8ca2cc2ef70869af31463d1ae5ccc8fa3e334b307203fbf815207e"
+dependencies = [
+ "rustversion",
+]
+
+[[package]]
 name = "autocfg"
 version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -275,6 +284,12 @@ checksum = "f52b00d39961fc5b2736ea853c9cc86238e165017a493d1d5c8eac6bdc4cc273"
 [[package]]
 name = "multi-agent-engine"
 version = "0.1.0"
+dependencies = [
+ "multi-agent-engine-core",
+ "multi-agent-engine-gpu",
+ "multi-agent-engine-runtime",
+ "multi-agent-engine-sync",
+]
 
 [[package]]
 name = "multi-agent-engine-core"
@@ -292,6 +307,7 @@ version = "0.1.0"
 name = "multi-agent-engine-sync"
 version = "0.1.0"
 dependencies = [
+ "arc-swap",
  "crossbeam-channel",
  "multi-agent-engine-core",
 ]

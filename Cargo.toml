@@ -53,6 +53,7 @@ multi-agent-engine-sync = { path = "crates/multi-agent-engine-sync" }
 # Runtime
 # Sync
 crossbeam-channel = { version = "0.5.15", features = ["default"] }
+arc-swap = { version = "1.8.0", features = [] }
 
 [workspace.lints.rust]
 unsafe_code = "forbid"

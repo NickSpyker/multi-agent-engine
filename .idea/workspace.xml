@@ -29,26 +29,21 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Rewrite README.md">
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/error.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/result.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/alias.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/channel.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/direction.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/receiver.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/sender.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/tests/integration_test.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" afterDir="false" />
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Add channel, sender, and receiver">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/alias.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/shared.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/channel.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/channel.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/tests/integration_test.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/tests/integration_test.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/getting_started.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/getting_started.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,7 +51,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -67,24 +62,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "NickSpyker"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;NickSpyker&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "git@github.com:NickSpyker/multi-agent-engine.git",
-    "accountId": "5efd3125-5b5c-46dc-a991-daa31dc62863"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:NickSpyker/multi-agent-engine.git&quot;,
+    &quot;accountId&quot;: &quot;5efd3125-5b5c-46dc-a991-daa31dc62863&quot;
   }
-}]]></component>
+}</component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="KxHEQaeP" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="37To6ohsnHubck8YRoL6aAatHby" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -93,35 +88,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Cargo.Test.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/Spijkerman/Repositories/multi-agent-engine/crates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "language.rust.cargo.check",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Cargo.Run Example getting_started.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Spijkerman/Repositories/multi-agent-engine/crates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust.cargo.check&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Spijkerman\Repositories\multi-agent-engine\crates" />
@@ -131,23 +126,11 @@
   <component name="RsExternalLinterProjectSettings">
     <option name="tool" value="Clippy" />
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Cargo.Run Example getting_started">
+    <list>
+      <item itemvalue="Cargo.Test" />
+      <item itemvalue="Cargo.Run Example getting_started" />
+    </list>
   </component>
   <component name="RustProjectSettings">
     <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
@@ -160,7 +143,8 @@
       <option name="presentableId" value="Default" />
       <updated>1722191757172</updated>
       <workItem from="1722191758257" duration="44000" />
-      <workItem from="1766936252622" duration="9424000" />
+      <workItem from="1766936252622" duration="11291000" />
+      <workItem from="1766951005724" duration="956000" />
     </task>
     <task id="LOCAL-00001" summary="Fix and reset cargo workspace">
       <option name="closed" value="true" />
@@ -178,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766940621360</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add channel, sender, and receiver">
+      <option name="closed" value="true" />
+      <created>1766946042056</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1766946042056</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,6 +179,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix and reset cargo workspace" />
     <MESSAGE value="Rewrite README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rewrite README.md" />
+    <MESSAGE value="Add channel, sender, and receiver" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add channel, sender, and receiver" />
   </component>
 </project>

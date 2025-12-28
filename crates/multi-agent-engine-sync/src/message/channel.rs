@@ -14,8 +14,17 @@
  * limitations under the License.
  */
 
-use super::{direction::sealed, MessageReceiver, MessageSender};
+use super::{
+    direction::{sealed, FromController, FromSystem, ToController, ToSystem}, MessageReceiver,
+    MessageSender,
+};
 use crossbeam_channel as channel;
+
+pub type FromControllerToSystem<M> = MessageChannel<M, FromController, ToSystem>;
+
+pub type FromSystemToController<M> = MessageChannel<M, FromSystem, ToController>;
+
+pub type FromControllerToController<M> = MessageChannel<M, FromController, ToController>;
 
 pub struct MessageChannel<M, F: sealed::FromDirection, T: sealed::ToDirection> {
     pub sender: MessageSender<M, T>,

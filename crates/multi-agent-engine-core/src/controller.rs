@@ -14,9 +14,13 @@
  * limitations under the License.
  */
 
+use crate::Result;
+
 pub trait Controller {
     type Config;
     type State;
     type OutgoingMessage;
     type IncomingMessage;
+
+    fn run(self) -> Result<()>;
 }

@@ -14,10 +14,28 @@
  * limitations under the License.
  */
 
-pub struct MultiAgentEngine {}
+use multi_agent_engine_core::{Controller, Error, Result, System};
+use std::thread;
 
-impl MultiAgentEngine {
-    pub fn new() -> Self {
-        Self {}
+pub struct MultiAgentEngine<S: System> {
+    system: S,
+}
+
+impl<S: System + Send + 'static> MultiAgentEngine<S> {
+    pub fn new_with_system(system: S) -> Self {
+        Self { system }
+    }
+
+    pub fn with_controller<C: Controller>(self, controller: C) -> Self {
+        // TODO: Add controller to controller list
+        self
+    }
+
+    pub fn run(self) -> Result<()> {
+        let Self { system } = self;
+
+        let system_handle = thread::spawn(move || system.run());
+
+        system_handle.join().map_err(Error::Thread)?
     }
 }

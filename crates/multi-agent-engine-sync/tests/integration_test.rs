@@ -15,30 +15,28 @@
  */
 
 use multi_agent_engine_sync::message::{
-    direction::{FromController, FromSystem, ToController, ToSystem}, FromControllerToController, FromControllerToSystem, FromSystemToController,
-    MessageChannel, MessageReceiver,
-    MessageSender,
+    channel, direction, MessageChannel, MessageReceiver, MessageSender,
 };
 
 enum Message {}
 
 #[test]
 fn test_integration_message_channel() {
-    let channel_fc_ts: FromControllerToSystem<Message> = MessageChannel::unbounded();
+    let channel_fc_ts: channel::FromControllerToSystem<Message> = MessageChannel::unbounded();
     let _: (
-        MessageSender<Message, ToSystem>,
-        MessageReceiver<Message, FromController>,
+        MessageSender<Message, direction::ToSystem>,
+        MessageReceiver<Message, direction::FromController>,
     ) = channel_fc_ts.split();
 
-    let channel_fs_tc: FromSystemToController<Message> = MessageChannel::bounded(0);
+    let channel_fs_tc: channel::FromSystemToController<Message> = MessageChannel::bounded(0);
     let _: (
-        MessageSender<Message, ToController>,
-        MessageReceiver<Message, FromSystem>,
+        MessageSender<Message, direction::ToController>,
+        MessageReceiver<Message, direction::FromSystem>,
     ) = channel_fs_tc.split();
 
-    let channel_fc_tc: FromControllerToController<Message> = MessageChannel::bounded(10);
+    let channel_fc_tc: channel::FromControllerToController<Message> = MessageChannel::bounded(10);
     let _: (
-        MessageSender<Message, ToController>,
-        MessageReceiver<Message, FromController>,
+        MessageSender<Message, direction::ToController>,
+        MessageReceiver<Message, direction::FromController>,
     ) = channel_fc_tc.split();
 }

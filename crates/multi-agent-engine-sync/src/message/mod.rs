@@ -14,14 +14,12 @@
  * limitations under the License.
  */
 
-mod alias;
-mod channel;
 mod receiver;
 mod sender;
 
+pub mod channel;
 pub mod direction;
 
-pub use alias::{FromControllerToController, FromControllerToSystem, FromSystemToController};
 pub use channel::MessageChannel;
 pub use receiver::MessageReceiver;
 pub use sender::MessageSender;

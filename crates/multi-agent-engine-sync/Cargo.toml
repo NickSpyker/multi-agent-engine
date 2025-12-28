@@ -33,6 +33,7 @@ default = []
 [dependencies]
 multi-agent-engine-core.workspace = true
 crossbeam-channel.workspace = true
+arc-swap.workspace = true
 
 [lints]
 workspace = true

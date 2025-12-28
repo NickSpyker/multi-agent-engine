@@ -14,4 +14,8 @@
  * limitations under the License.
  */
 
+mod shared;
+
 pub mod message;
+
+pub use shared::{GuardArc, Shared};

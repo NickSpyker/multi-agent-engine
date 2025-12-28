@@ -14,13 +14,28 @@
  * limitations under the License.
  */
 
-use super::{
-    direction::{FromController, FromSystem, ToController, ToSystem},
-    MessageChannel,
-};
+use arc_swap::{ArcSwap, Guard};
+use std::sync::Arc;
 
-pub type FromControllerToSystem<M> = MessageChannel<M, FromController, ToSystem>;
+pub type GuardArc<T> = Guard<Arc<T>>;
 
-pub type FromSystemToController<M> = MessageChannel<M, FromSystem, ToController>;
+#[derive(Debug, Clone)]
+pub struct Shared<T> {
+    inner: Arc<ArcSwap<T>>,
+}
 
-pub type FromControllerToController<M> = MessageChannel<M, FromController, ToController>;
+impl<T> Shared<T> {
+    pub fn new(data: T) -> Self {
+        Self {
+            inner: Arc::new(ArcSwap::from_pointee(data)),
+        }
+    }
+
+    pub fn load(&self) -> GuardArc<T> {
+        self.inner.load()
+    }
+
+    pub fn store(&self, data: T) {
+        self.inner.store(Arc::new(data));
+    }
+}
