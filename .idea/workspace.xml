@@ -29,25 +29,34 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Fix and reset cargo workspace">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Rewrite README.md">
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/error.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/result.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/alias.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/channel.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/direction.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/mod.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/receiver.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/message/sender.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/tests/integration_test.rs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -87,6 +96,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Cargo.Test.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
@@ -122,23 +132,6 @@
     <option name="tool" value="Clippy" />
   </component>
   <component name="RunManager">
-    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
-      <option name="command" value="run --package multi-agent-engine --bin multi-agent-engine" />
-      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
-      <envs />
-      <option name="emulateTerminal" value="true" />
-      <option name="channel" value="DEFAULT" />
-      <option name="requiredFeatures" value="true" />
-      <option name="allFeatures" value="false" />
-      <option name="withSudo" value="false" />
-      <option name="buildTarget" value="REMOTE" />
-      <option name="backtrace" value="SHORT" />
-      <option name="isRedirectInput" value="false" />
-      <option name="redirectInputPath" value="" />
-      <method v="2">
-        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
       <option name="command" value="run" />
       <envs />
@@ -167,7 +160,7 @@
       <option name="presentableId" value="Default" />
       <updated>1722191757172</updated>
       <workItem from="1722191758257" duration="44000" />
-      <workItem from="1766936252622" duration="4048000" />
+      <workItem from="1766936252622" duration="9424000" />
     </task>
     <task id="LOCAL-00001" summary="Fix and reset cargo workspace">
       <option name="closed" value="true" />
@@ -177,7 +170,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766938348987</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rewrite README.md">
+      <option name="closed" value="true" />
+      <created>1766940621360</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1766940621360</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,6 +186,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fix and reset cargo workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix and reset cargo workspace" />
+    <MESSAGE value="Rewrite README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rewrite README.md" />
   </component>
 </project>

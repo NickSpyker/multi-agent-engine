@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-mod controller;
-mod error;
-mod result;
-mod system;
+use super::{
+    direction::{FromController, FromSystem, ToController, ToSystem},
+    MessageChannel,
+};
 
-pub use controller::Controller;
-pub use error::Error;
-pub use result::Result;
-pub use system::System;
+pub type FromControllerToSystem<M> = MessageChannel<M, FromController, ToSystem>;
+
+pub type FromSystemToController<M> = MessageChannel<M, FromSystem, ToController>;
+
+pub type FromControllerToController<M> = MessageChannel<M, FromController, ToController>;

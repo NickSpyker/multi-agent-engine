@@ -47,7 +47,12 @@ multi-agent-engine-core = { path = "crates/multi-agent-engine-core" }
 multi-agent-engine-gpu = { path = "crates/multi-agent-engine-gpu" }
 multi-agent-engine-runtime = { path = "crates/multi-agent-engine-runtime" }
 multi-agent-engine-sync = { path = "crates/multi-agent-engine-sync" }
-# Dependencies
+# Common
+# Core
+# Gpu
+# Runtime
+# Sync
+crossbeam-channel = { version = "0.5.15", features = ["default"] }
 
 [workspace.lints.rust]
 unsafe_code = "forbid"

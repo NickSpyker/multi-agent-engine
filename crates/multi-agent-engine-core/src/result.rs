@@ -14,12 +14,7 @@
  * limitations under the License.
  */
 
-mod controller;
-mod error;
-mod result;
-mod system;
+use crate::Error;
+use std::result;
 
-pub use controller::Controller;
-pub use error::Error;
-pub use result::Result;
-pub use system::System;
+pub type Result<T> = result::Result<T, Error>;

@@ -14,12 +14,19 @@
  * limitations under the License.
  */
 
-mod controller;
-mod error;
-mod result;
-mod system;
+pub(super) mod sealed {
+    pub(crate) trait ToDirection {}
+    pub(crate) trait FromDirection {}
+}
 
-pub use controller::Controller;
-pub use error::Error;
-pub use result::Result;
-pub use system::System;
+pub struct ToController;
+impl sealed::ToDirection for ToController {}
+
+pub struct ToSystem;
+impl sealed::ToDirection for ToSystem {}
+
+pub struct FromController;
+impl sealed::FromDirection for FromController {}
+
+pub struct FromSystem;
+impl sealed::FromDirection for FromSystem {}
