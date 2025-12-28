@@ -29,66 +29,18 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/documentation.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Bench.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Example_Getting_Started.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/benches/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/LICENSE-MIT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/benches/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/core.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/gpu.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/multi_agent_engine.rs" beforeDir="false" afterPath="$PROJECT_DIR$/benches/multi_agent_engine.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/runtime.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/benches/sync.rs" beforeDir="false" />
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Fix and reset cargo workspace">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/LICENSE-MIT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/error.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/result.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/LICENSE-MIT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/LICENSE-MIT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/LICENSE-MIT" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/core.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/gpu.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/multi-agent-engine.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/runtime.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/sync.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/Cargo.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/LICENSE-APACHE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/LICENSE-MIT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/examples/getting_started.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/getting_started.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/controller.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/mod.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/queue.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/receiver.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/sender.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/multi_agent_engine.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/shared.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/simulator.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_multi_agent_engine.rs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,12 +86,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.rust.reset.selective.auto.import": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
@@ -213,11 +167,24 @@
       <option name="presentableId" value="Default" />
       <updated>1722191757172</updated>
       <workItem from="1722191758257" duration="44000" />
-      <workItem from="1766936252622" duration="2043000" />
+      <workItem from="1766936252622" duration="4048000" />
     </task>
+    <task id="LOCAL-00001" summary="Fix and reset cargo workspace">
+      <option name="closed" value="true" />
+      <created>1766938348987</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1766938348987</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fix and reset cargo workspace" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix and reset cargo workspace" />
   </component>
 </project>
