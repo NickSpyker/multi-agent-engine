@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="CargoProjects">
+    <cargoProject FILE="$PROJECT_DIR$/Cargo.toml">
+      <package file="$PROJECT_DIR$/benches">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/examples">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/multi-agent-engine">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/crates/multi-agent-engine-core">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/crates/multi-agent-engine-gpu">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/crates/multi-agent-engine-runtime">
+        <feature name="default" enabled="true" />
+      </package>
+      <package file="$PROJECT_DIR$/crates/multi-agent-engine-sync">
+        <feature name="default" enabled="true" />
+      </package>
+    </cargoProject>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/documentation.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/multi-agent-engine.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Bench.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/Example_Getting_Started.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/benches/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/benches/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/core.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/gpu.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/multi_agent_engine.rs" beforeDir="false" afterPath="$PROJECT_DIR$/benches/multi_agent_engine.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/runtime.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/benches/sync.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/error.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/result.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-gpu/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/core.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/gpu.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/multi-agent-engine.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/runtime.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/sync.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/LICENSE-APACHE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/LICENSE-MIT" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/examples/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/getting_started.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/getting_started.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/controller.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/mod.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/queue.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/receiver.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/message/sender.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/multi_agent_engine.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/shared.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/simulator.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_multi_agent_engine.rs" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:dev" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Rust File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NickSpyker"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:NickSpyker/multi-agent-engine.git",
+    "accountId": "5efd3125-5b5c-46dc-a991-daa31dc62863"
+  }
+}]]></component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="KxHEQaeP" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="37To6ohsnHubck8YRoL6aAatHby" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Spijkerman/Repositories/multi-agent-engine/crates",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "settings.editor.selected.configurable": "language.rust.cargo.check",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Spijkerman\Repositories\multi-agent-engine\crates" />
+      <recent name="C:\Users\Spijkerman\Repositories\multi-agent-engine\multi-agent-engine" />
+    </key>
+  </component>
+  <component name="RsExternalLinterProjectSettings">
+    <option name="tool" value="Clippy" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Run" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run --package multi-agent-engine --bin multi-agent-engine" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CargoCommandRunConfiguration" factoryName="Cargo Command">
+      <option name="command" value="run" />
+      <envs />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="RustProjectSettings">
+    <option name="toolchainHomeDirectory" value="$USER_HOME$/.cargo/bin" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="" />
+      <created>1722191757172</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1722191757172</updated>
+      <workItem from="1722191758257" duration="44000" />
+      <workItem from="1766936252622" duration="2043000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

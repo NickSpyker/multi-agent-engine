@@ -16,8 +16,12 @@
 name = "examples"
 version = "0.0.0"
 authors.workspace = true
-description = "Collection of examples to show how to use the crate multi-agent-engine."
+categories.workspace = true
+description = "These examples demonstrate how to use Multi-Agent Engine"
+documentation = "README.md"
 edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
 license.workspace = true
 publish = false
 readme = "README.md"
@@ -26,6 +30,9 @@ repository.workspace = true
 [dependencies]
 multi-agent-engine = { path = "../multi-agent-engine" }
 
+[lints]
+workspace = true
+
 [[example]]
-name = "getting-started"
+name = "getting_started"
 path = "getting_started.rs"

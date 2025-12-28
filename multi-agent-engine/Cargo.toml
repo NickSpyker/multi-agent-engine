@@ -17,8 +17,8 @@ name = "multi-agent-engine"
 version.workspace = true
 authors.workspace = true
 categories.workspace = true
-description = "A concurrent library for building multi-agent simulators with lock-free CPU/GPU hybrid execution."
-documentation = "https://github.com/NickSpyker/multi-agent-engine/blob/main/docs/multi-agent-engine.md"
+description.workspace = true
+documentation.workspace = true
 edition.workspace = true
 homepage.workspace = true
 keywords.workspace = true
@@ -31,7 +31,6 @@ repository.workspace = true
 default = []
 
 [dependencies]
-multi-agent-engine-core.workspace = true
-multi-agent-engine-gpu.workspace = true
-crossbeam-channel.workspace = true
-arc-swap.workspace = true
+
+[lints]
+workspace = true

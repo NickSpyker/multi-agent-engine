@@ -1,12 +1,13 @@
-# Multi-Agent Engine Examples
+# Examples of How to Use Multi-Agent Engine
 
-These examples show how to use the crate `multi-agent-engine`.
+These examples demonstrate how to use Multi-Agent Engine.
+
+## Running examples
+
 To run an example, use the command:
 
 ```shell
-cargo run --example <name>
+cargo run --example $name
 ```
 
-## License
-
-See [LICENSE-APACHE](LICENSE-APACHE) and [LICENSE-MIT](LICENSE-MIT) for details.
+A good starting point for the examples would be [Getting Started](getting_started.rs).

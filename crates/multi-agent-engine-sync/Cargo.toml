@@ -31,3 +31,6 @@ repository.workspace = true
 default = []
 
 [dependencies]
+
+[lints]
+workspace = true

@@ -16,8 +16,12 @@
 name = "benches"
 version = "0.0.0"
 authors.workspace = true
-description = "Collection of benchmarks for Multi-Agent Engine."
+categories.workspace = true
+description = "Benchmarks that test Multi-Agent Engine's performance"
+documentation = "README.md"
 edition.workspace = true
+homepage.workspace = true
+keywords.workspace = true
 license.workspace = true
 publish = false
 readme = "README.md"
@@ -26,25 +30,17 @@ repository.workspace = true
 [dependencies]
 criterion = { version = "0.8.1", features = ["default"] }
 
-[[bench]]
-name = "core"
-path = "core.rs"
-harness = false
+[dev-dependencies]
+# Workspace Crates
+multi-agent-engine-core.workspace = true
+multi-agent-engine-gpu.workspace = true
+multi-agent-engine-runtime.workspace = true
+multi-agent-engine-sync.workspace = true
+# Published Library
+multi-agent-engine = { path = "../multi-agent-engine" }
 
-[[bench]]
-name = "sync"
-path = "sync.rs"
-harness = false
-
-[[bench]]
-name = "runtime"
-path = "runtime.rs"
-harness = false
-
-[[bench]]
-name = "gpu"
-path = "gpu.rs"
-harness = false
+[lints]
+workspace = true
 
 [[bench]]
 name = "multi_agent_engine"

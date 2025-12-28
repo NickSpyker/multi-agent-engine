@@ -16,8 +16,8 @@
 
 use criterion::{criterion_group, criterion_main, Criterion};
 
-fn basic_setup(c: &mut Criterion) {}
+fn setup(c: &mut Criterion) {}
 
-criterion_group!(multi_agent_engine, basic_setup);
+criterion_group!(multi_agent_engine, setup);
 
 criterion_main!(multi_agent_engine);
