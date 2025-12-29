@@ -85,9 +85,10 @@ impl System for Simulator {
 
             let elapsed = now.elapsed();
 
+            let current_state = self.state.load();
             self.state.store(State {
                 elapsed,
-                ..self.state
+                other_data: current_state.other_data.clone(),
             });
 
             if elapsed < frequency {

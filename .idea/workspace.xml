@@ -29,18 +29,9 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Add shared">
-      <change afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/boxed_controller.rs" afterDir="false" />
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Add boxed controller and update example">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/controller.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-core/src/system.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-runtime/src/lib.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/shared.rs" beforeDir="false" afterPath="$PROJECT_DIR$/crates/multi-agent-engine-sync/src/shared.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/getting_started.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/getting_started.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/engine.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/multi-agent-engine/src/lib.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +132,7 @@
       <workItem from="1722191758257" duration="44000" />
       <workItem from="1766936252622" duration="11291000" />
       <workItem from="1766951005724" duration="3281000" />
-      <workItem from="1767003111663" duration="3756000" />
+      <workItem from="1767003111663" duration="3913000" />
     </task>
     <task id="LOCAL-00001" summary="Fix and reset cargo workspace">
       <option name="closed" value="true" />
@@ -175,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766952005480</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Add boxed controller and update example">
+      <option name="closed" value="true" />
+      <created>1767007227844</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1767007227844</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +196,7 @@
     <MESSAGE value="Rewrite README.md" />
     <MESSAGE value="Add channel, sender, and receiver" />
     <MESSAGE value="Add shared" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add shared" />
+    <MESSAGE value="Add boxed controller and update example" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add boxed controller and update example" />
   </component>
 </project>
