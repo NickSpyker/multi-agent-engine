@@ -14,28 +14,16 @@
  * limitations under the License.
  */
 
-use arc_swap::{ArcSwap, Guard};
-use std::sync::Arc;
+use multi_agent_engine_core::{Controller, Result};
 
-pub type GuardArc<T> = Guard<Arc<T>>;
+pub type BoxedController = Box<dyn BoxedControllerRunner>;
 
-#[derive(Debug, Clone)]
-pub struct Shared<T: Clone> {
-    inner: Arc<ArcSwap<T>>,
+pub trait BoxedControllerRunner: Send {
+    fn run(self: Box<Self>) -> Result<()>;
 }
 
-impl<T: Clone> Shared<T> {
-    pub fn new(data: T) -> Self {
-        Self {
-            inner: Arc::new(ArcSwap::from_pointee(data)),
-        }
-    }
-
-    pub fn load(&self) -> GuardArc<T> {
-        self.inner.load()
-    }
-
-    pub fn store(&self, data: T) {
-        self.inner.store(Arc::new(data));
+impl<C: Controller + Send + 'static> BoxedControllerRunner for C {
+    fn run(self: Box<Self>) -> Result<()> {
+        Controller::run(*self)
     }
 }

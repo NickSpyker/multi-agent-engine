@@ -15,26 +15,43 @@
  */
 
 use multi_agent_engine_core::{Controller, Error, Result, System};
-use std::thread;
+use multi_agent_engine_runtime::BoxedController;
+use std::thread::{self, JoinHandle};
 
 pub struct MultiAgentEngine<S: System> {
     system: S,
+    controllers: Vec<BoxedController>,
 }
 
 impl<S: System + Send + 'static> MultiAgentEngine<S> {
     pub fn new_with_system(system: S) -> Self {
-        Self { system }
+        Self {
+            system,
+            controllers: Vec::new(),
+        }
     }
 
-    pub fn with_controller<C: Controller>(self, controller: C) -> Self {
-        // TODO: Add controller to controller list
+    pub fn with_controller<C: Controller + Send + 'static>(mut self, controller: C) -> Self {
+        self.controllers.push(Box::new(controller));
         self
     }
 
     pub fn run(self) -> Result<()> {
-        let Self { system } = self;
+        let Self {
+            system,
+            controllers,
+        } = self;
+
+        let controller_handles: Vec<JoinHandle<Result<()>>> = controllers
+            .into_iter()
+            .map(|controller| thread::spawn(move || controller.run()))
+            .collect();
 
         let system_handle = thread::spawn(move || system.run());
+
+        for handle in controller_handles {
+            handle.join().map_err(Error::Thread)??;
+        }
 
         system_handle.join().map_err(Error::Thread)?
     }

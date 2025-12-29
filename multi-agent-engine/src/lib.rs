@@ -19,4 +19,4 @@ mod engine;
 pub use engine::MultiAgentEngine;
 
 pub use multi_agent_engine_core::{Controller, Error, Result, System};
-pub use multi_agent_engine_sync::message;
+pub use multi_agent_engine_sync::{message, Shared};
