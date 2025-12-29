@@ -29,7 +29,7 @@
     </cargoProject>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Add boxed controller and update example">
+    <list default="true" id="93b50b4f-eba9-4680-95db-5758c788790d" name="Changes" comment="Fix example shared state build error">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/getting_started.rs" beforeDir="false" afterPath="$PROJECT_DIR$/examples/getting_started.rs" afterDir="false" />
     </list>
@@ -132,7 +132,7 @@
       <workItem from="1722191758257" duration="44000" />
       <workItem from="1766936252622" duration="11291000" />
       <workItem from="1766951005724" duration="3281000" />
-      <workItem from="1767003111663" duration="3913000" />
+      <workItem from="1767003111663" duration="4087000" />
     </task>
     <task id="LOCAL-00001" summary="Fix and reset cargo workspace">
       <option name="closed" value="true" />
@@ -174,7 +174,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767007227844</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix example shared state build error">
+      <option name="closed" value="true" />
+      <created>1767007379433</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1767007379433</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,6 +205,7 @@
     <MESSAGE value="Add channel, sender, and receiver" />
     <MESSAGE value="Add shared" />
     <MESSAGE value="Add boxed controller and update example" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add boxed controller and update example" />
+    <MESSAGE value="Fix example shared state build error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix example shared state build error" />
   </component>
 </project>
